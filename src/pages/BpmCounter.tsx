@@ -73,6 +73,20 @@ const BpmCounter = () => {
               </p>
             )}
           </div>
+
+          {taps.length > 0 && (
+            <Button
+              onClick={(e) => {
+                e.stopPropagation();
+                handleReset();
+              }}
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-xl"
+            >
+              <RotateCcw className="h-6 w-6 mr-2" />
+              Reset
+            </Button>
+          )}
         </div>
       </div>
     </div>

@@ -3,37 +3,22 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, Phone, PhoneOff } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useConversation } from "@11labs/react";
-import { useToast } from "@/hooks/use-toast";
 
 const TerribleLindyBot = () => {
   const navigate = useNavigate();
-  const { toast } = useToast();
   const [isConnected, setIsConnected] = useState(false);
 
   const conversation = useConversation({
     onConnect: () => {
       console.log("Connected to agent");
       setIsConnected(true);
-      toast({
-        title: "Connected",
-        description: "You're now talking to the Terrible Lindy Bot!",
-      });
     },
     onDisconnect: () => {
       console.log("Disconnected from agent");
       setIsConnected(false);
-      toast({
-        title: "Disconnected",
-        description: "Call ended",
-      });
     },
     onError: (error) => {
       console.error("Conversation error:", error);
-      toast({
-        title: "Error",
-        description: "Failed to connect to the agent",
-        variant: "destructive",
-      });
     },
   });
 
@@ -50,11 +35,6 @@ const TerribleLindyBot = () => {
       });
     } catch (error) {
       console.error("Error starting conversation:", error);
-      toast({
-        title: "Error",
-        description: error instanceof Error ? error.message : "Failed to start conversation",
-        variant: "destructive",
-      });
     }
   };
 
@@ -88,9 +68,9 @@ const TerribleLindyBot = () => {
           size="lg"
         >
           {isConnected ? (
-            <PhoneOff className="h-24 w-24 text-white" />
+            <PhoneOff className="h-40 w-40 text-white" />
           ) : (
-            <Phone className="h-24 w-24 text-white" />
+            <Phone className="h-40 w-40 text-white" />
           )}
         </Button>
       </div>
