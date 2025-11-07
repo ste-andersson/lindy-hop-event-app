@@ -40,8 +40,13 @@ const TerribleLindyBot = () => {
   const startConversation = async () => {
     try {
       await navigator.mediaDevices.getUserMedia({ audio: true });
+      
+      // For public agents, we can connect directly with signed URL endpoint
+      const agentId = "agent_3901k9g7sb0qebs8bpyeq3zk3mn3";
+      const signedUrl = `wss://api.elevenlabs.io/v1/convai/conversation?agent_id=${agentId}`;
+      
       await conversation.startSession({
-        agentId: "agent_3901k9g7sb0qebs8bpyeq3zk3mn3",
+        signedUrl,
       });
     } catch (error) {
       console.error("Error starting conversation:", error);
