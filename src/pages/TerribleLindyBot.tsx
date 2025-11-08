@@ -68,9 +68,9 @@ const TerribleLindyBot = () => {
           size="lg"
         >
           {isConnected ? (
-            <PhoneOff className="h-[200px] w-[200px] text-white" />
+            <PhoneOff className="!h-[200px] !w-[200px] text-white" />
           ) : (
-            <Phone className="h-[200px] w-[200px] text-white" />
+            <Phone className="!h-[200px] !w-[200px] text-white" />
           )}
         </Button>
       </div>
