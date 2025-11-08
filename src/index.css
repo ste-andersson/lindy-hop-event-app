@@ -107,5 +107,9 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
   }
 }
