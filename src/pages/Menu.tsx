@@ -11,7 +11,7 @@ const Menu = () => {
       <div className="w-full max-w-md space-y-8">
         <div className="text-center space-y-2 mb-8">
           <h1 className="text-5xl font-bold text-primary tracking-tight">
-            Fall Vibes
+            LINDY HOP and FALL VIBES
           </h1>
           <p className="text-muted-foreground text-lg">
             The official event app
