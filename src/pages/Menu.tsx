@@ -29,7 +29,7 @@ const Menu = () => {
         <div className="space-y-4">
           <button
             onClick={() => navigate("/bpm-counter")}
-            className="w-full h-20 bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all rounded-lg overflow-hidden flex items-center gap-4 p-4 group"
+            className="w-full h-20 bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all rounded-lg overflow-hidden flex items-center gap-3 py-4 pl-4 pr-4 group"
           >
             <div className="w-16 h-16 bg-primary-foreground/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
               <Activity className="!h-8 !w-8 text-primary-foreground" />
@@ -41,7 +41,7 @@ const Menu = () => {
 
           <button
             onClick={() => navigate("/terrible-lindy-bot")}
-            className="w-full h-20 bg-accent hover:bg-accent/90 shadow-lg hover:shadow-xl transition-all rounded-lg overflow-hidden flex items-center gap-4 p-4 group"
+            className="w-full h-20 bg-accent hover:bg-accent/90 shadow-lg hover:shadow-xl transition-all rounded-lg overflow-hidden flex items-center gap-3 py-4 pl-4 pr-4 group"
           >
             <div className="w-16 h-16 bg-accent-foreground/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
               <Bot className="!h-8 !w-8 text-accent-foreground" />
@@ -53,7 +53,7 @@ const Menu = () => {
 
           <button
             onClick={() => navigate("/dance-card")}
-            className="w-full h-20 bg-secondary hover:bg-secondary/90 shadow-lg hover:shadow-xl transition-all rounded-lg overflow-hidden flex items-center gap-4 p-4 group"
+            className="w-full h-20 bg-secondary hover:bg-secondary/90 shadow-lg hover:shadow-xl transition-all rounded-lg overflow-hidden flex items-center gap-3 py-4 pl-4 pr-4 group"
           >
             <div className="w-16 h-16 bg-secondary-foreground/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
               <Users className="!h-8 !w-8 text-secondary-foreground" />
