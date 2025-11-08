@@ -10,10 +10,10 @@ const Menu = () => {
       <div className="w-full max-w-md space-y-8">
         <div className="text-center space-y-2 mb-12">
           <h1 className="text-5xl font-bold text-primary tracking-tight">
-            Swing Time
+            Fall Vibes
           </h1>
           <p className="text-muted-foreground text-lg">
-            Your Lindy Hop companion
+            The official event app
           </p>
         </div>
 
