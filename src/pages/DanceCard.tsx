@@ -117,9 +117,14 @@ function SortableDancer({
             onCheckedChange={() => toggleDanced(dancer.id)}
             className="ml-2"
           />
-          <span className={`flex-1 font-medium ${dancer.danced ? "text-muted-foreground line-through" : "text-foreground"}`}>
-            {dancer.name}
-          </span>
+          <div className="flex-1 flex flex-col">
+            <span className="font-medium text-foreground">
+              {dancer.name}
+            </span>
+            <span className="text-xs text-muted-foreground">
+              {dancer.danced ? "danced" : "to be danced"}
+            </span>
+          </div>
           <Button
             variant="ghost"
             size="icon"
