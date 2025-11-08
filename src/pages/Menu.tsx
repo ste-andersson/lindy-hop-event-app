@@ -10,7 +10,7 @@ const Menu = () => {
     <div className="min-h-screen bg-background flex flex-col items-center justify-center p-6">
       <div className="w-full max-w-md space-y-8">
         <div className="text-center space-y-2 mb-8">
-          <h1 className="text-5xl font-bold text-primary tracking-tight">
+          <h1 className="text-4xl md:text-5xl font-bold text-primary tracking-tight font-oswald">
             LINDY HOP and FALL VIBES
           </h1>
           <p className="text-muted-foreground text-lg">
