@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
 import { ArrowLeft, Plus, Trash2, GripVertical, Pencil, Check, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import {
@@ -24,6 +25,7 @@ import { CSS } from "@dnd-kit/utilities";
 interface Dancer {
   id: string;
   name: string;
+  danced: boolean;
 }
 
 interface SortableDancerProps {
@@ -36,6 +38,7 @@ interface SortableDancerProps {
   saveEdit: () => void;
   cancelEdit: () => void;
   deleteDancer: (id: string) => void;
+  toggleDanced: (id: string) => void;
 }
 
 function SortableDancer({
@@ -47,6 +50,7 @@ function SortableDancer({
   saveEdit,
   cancelEdit,
   deleteDancer,
+  toggleDanced,
 }: SortableDancerProps) {
   const {
     attributes,
@@ -108,7 +112,12 @@ function SortableDancer({
         </>
       ) : (
         <>
-          <span className="flex-1 font-medium text-foreground">
+          <Checkbox
+            checked={dancer.danced}
+            onCheckedChange={() => toggleDanced(dancer.id)}
+            className="ml-2"
+          />
+          <span className={`flex-1 font-medium ${dancer.danced ? "text-muted-foreground line-through" : "text-foreground"}`}>
             {dancer.name}
           </span>
           <Button
@@ -164,6 +173,7 @@ const DanceCard = () => {
     const newDancer: Dancer = {
       id: Date.now().toString(),
       name: newDancerName.trim(),
+      danced: false,
     };
 
     setDancers([...dancers, newDancer]);
@@ -194,6 +204,12 @@ const DanceCard = () => {
   const cancelEdit = () => {
     setEditingId(null);
     setEditingName("");
+  };
+
+  const toggleDanced = (id: string) => {
+    setDancers(dancers.map((d) => 
+      d.id === id ? { ...d, danced: !d.danced } : d
+    ));
   };
 
   const handleDragEnd = (event: DragEndEvent) => {
@@ -266,6 +282,7 @@ const DanceCard = () => {
                     saveEdit={saveEdit}
                     cancelEdit={cancelEdit}
                     deleteDancer={deleteDancer}
+                    toggleDanced={toggleDanced}
                   />
                 ))}
               </SortableContext>
