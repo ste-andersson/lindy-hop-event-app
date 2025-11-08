@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Activity, Bot, ScrollText } from "lucide-react";
+import { Music, Phone, Users } from "lucide-react";
 import heroImage from "@/assets/fall-vibes-hero.png";
 
 const Menu = () => {
@@ -27,32 +27,41 @@ const Menu = () => {
         </div>
 
         <div className="space-y-4">
-          <Button
+          <button
             onClick={() => navigate("/bpm-counter")}
-            className="w-full h-24 text-2xl font-bold bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-xl transition-all"
-            size="lg"
+            className="w-full h-24 bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all rounded-md overflow-hidden flex items-stretch group"
           >
-            <Activity className="mr-3 h-8 w-8" />
-            BPM Counter
-          </Button>
+            <div className="w-24 bg-primary/80 flex items-center justify-center">
+              <Music className="!h-12 !w-12 text-primary-foreground" />
+            </div>
+            <div className="flex-1 flex items-center justify-center text-2xl font-bold text-primary-foreground">
+              BPM Counter
+            </div>
+          </button>
 
-          <Button
+          <button
             onClick={() => navigate("/terrible-lindy-bot")}
-            className="w-full h-24 text-2xl font-bold bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg hover:shadow-xl transition-all"
-            size="lg"
+            className="w-full h-24 bg-accent hover:bg-accent/90 shadow-lg hover:shadow-xl transition-all rounded-md overflow-hidden flex items-stretch group"
           >
-            <Bot className="mr-3 h-8 w-8" />
-            Terrible Lindy Bot
-          </Button>
+            <div className="w-24 bg-accent/80 flex items-center justify-center">
+              <Phone className="!h-12 !w-12 text-accent-foreground" />
+            </div>
+            <div className="flex-1 flex items-center justify-center text-2xl font-bold text-accent-foreground">
+              Terrible Lindy Bot
+            </div>
+          </button>
 
-          <Button
+          <button
             onClick={() => navigate("/dance-card")}
-            className="w-full h-24 text-2xl font-bold bg-secondary hover:bg-secondary/90 text-secondary-foreground shadow-lg hover:shadow-xl transition-all"
-            size="lg"
+            className="w-full h-24 bg-secondary hover:bg-secondary/90 shadow-lg hover:shadow-xl transition-all rounded-md overflow-hidden flex items-stretch group"
           >
-            <ScrollText className="mr-3 h-8 w-8" />
-            Dance Card
-          </Button>
+            <div className="w-24 bg-secondary/80 flex items-center justify-center">
+              <Users className="!h-12 !w-12 text-secondary-foreground" />
+            </div>
+            <div className="flex-1 flex items-center justify-center text-2xl font-bold text-secondary-foreground">
+              Dance Card
+            </div>
+          </button>
         </div>
       </div>
     </div>
