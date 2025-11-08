@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Music, Phone, Users } from "lucide-react";
+import { Activity, Bot, Users } from "lucide-react";
 import heroImage from "@/assets/fall-vibes-hero.png";
 
 const Menu = () => {
@@ -29,37 +29,40 @@ const Menu = () => {
         <div className="space-y-4">
           <button
             onClick={() => navigate("/bpm-counter")}
-            className="w-full h-24 bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all rounded-md overflow-hidden flex items-stretch group"
+            className="w-full h-20 bg-card border-2 border-primary/20 hover:border-primary hover:bg-primary/5 shadow-md hover:shadow-lg transition-all rounded-lg overflow-hidden flex items-center gap-4 p-4 group"
           >
-            <div className="w-24 bg-primary/80 flex items-center justify-center">
-              <Music className="!h-12 !w-12 text-primary-foreground" />
+            <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+              <Activity className="!h-8 !w-8 text-primary" />
             </div>
-            <div className="flex-1 flex items-center justify-center text-2xl font-bold text-primary-foreground">
-              BPM Counter
+            <div className="flex-1 text-left">
+              <div className="text-xl font-bold text-foreground">BPM Counter</div>
+              <div className="text-sm text-muted-foreground">Track the tempo</div>
             </div>
           </button>
 
           <button
             onClick={() => navigate("/terrible-lindy-bot")}
-            className="w-full h-24 bg-accent hover:bg-accent/90 shadow-lg hover:shadow-xl transition-all rounded-md overflow-hidden flex items-stretch group"
+            className="w-full h-20 bg-card border-2 border-accent/20 hover:border-accent hover:bg-accent/5 shadow-md hover:shadow-lg transition-all rounded-lg overflow-hidden flex items-center gap-4 p-4 group"
           >
-            <div className="w-24 bg-accent/80 flex items-center justify-center">
-              <Phone className="!h-12 !w-12 text-accent-foreground" />
+            <div className="w-16 h-16 bg-accent/10 rounded-lg flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+              <Bot className="!h-8 !w-8 text-accent" />
             </div>
-            <div className="flex-1 flex items-center justify-center text-2xl font-bold text-accent-foreground">
-              Terrible Lindy Bot
+            <div className="flex-1 text-left">
+              <div className="text-xl font-bold text-foreground">Terrible Lindy Bot</div>
+              <div className="text-sm text-muted-foreground">Chat with AI</div>
             </div>
           </button>
 
           <button
             onClick={() => navigate("/dance-card")}
-            className="w-full h-24 bg-secondary hover:bg-secondary/90 shadow-lg hover:shadow-xl transition-all rounded-md overflow-hidden flex items-stretch group"
+            className="w-full h-20 bg-card border-2 border-secondary/20 hover:border-secondary hover:bg-secondary/5 shadow-md hover:shadow-lg transition-all rounded-lg overflow-hidden flex items-center gap-4 p-4 group"
           >
-            <div className="w-24 bg-secondary/80 flex items-center justify-center">
-              <Users className="!h-12 !w-12 text-secondary-foreground" />
+            <div className="w-16 h-16 bg-secondary/10 rounded-lg flex items-center justify-center group-hover:bg-secondary/20 transition-colors">
+              <Users className="!h-8 !w-8 text-secondary" />
             </div>
-            <div className="flex-1 flex items-center justify-center text-2xl font-bold text-secondary-foreground">
-              Dance Card
+            <div className="flex-1 text-left">
+              <div className="text-xl font-bold text-foreground">Dance Card</div>
+              <div className="text-sm text-muted-foreground">Track your dances</div>
             </div>
           </button>
         </div>
