@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Activity, Bot, ScrollText } from "lucide-react";
+import heroImage from "@/assets/fall-vibes-hero.png";
 
 const Menu = () => {
   const navigate = useNavigate();
@@ -8,13 +9,21 @@ const Menu = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col items-center justify-center p-6">
       <div className="w-full max-w-md space-y-8">
-        <div className="text-center space-y-2 mb-12">
+        <div className="text-center space-y-2 mb-8">
           <h1 className="text-5xl font-bold text-primary tracking-tight">
             Fall Vibes
           </h1>
           <p className="text-muted-foreground text-lg">
             The official event app
           </p>
+        </div>
+
+        <div className="w-full mb-8 rounded-lg overflow-hidden shadow-lg">
+          <img 
+            src={heroImage} 
+            alt="Fall Vibes - Lindy Hop dancers" 
+            className="w-full h-auto"
+          />
         </div>
 
         <div className="space-y-4">
