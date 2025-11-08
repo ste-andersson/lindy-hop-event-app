@@ -71,7 +71,9 @@ function SortableDancer({
     <div
       ref={setNodeRef}
       style={style}
-      className="bg-card border border-border rounded-lg p-4 flex items-center gap-3"
+      className={`border rounded-lg p-4 flex items-center gap-3 ${
+        dancer.danced ? "bg-green-50 border-green-200 dark:bg-green-950/30 dark:border-green-900/50" : "bg-card border-border"
+      }`}
     >
       <div
         {...attributes}
