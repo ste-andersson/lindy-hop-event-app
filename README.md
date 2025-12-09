@@ -2,6 +2,8 @@
 
 En webbapplikation för Lindy Hop-evenemanget "Fall Vibes". Appen innehåller verktyg för att hjälpa dansare under evenemanget.
 
+> **Notera**: Detta projekt skapades i [Lovable](https://lovable.dev).
+
 **Live-app**: https://lindy-hop-event-app.lovable.app
 
 ## Funktioner
