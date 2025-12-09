@@ -1,73 +1,87 @@
-# Welcome to your Lovable project
+# Lindy Hop Event App
 
-## Project info
+En webbapplikation för Lindy Hop-evenemanget "Fall Vibes". Appen innehåller verktyg för att hjälpa dansare under evenemanget.
 
-**URL**: https://lovable.dev/projects/f07fdaa9-2b36-46f8-9764-3a9ded1b2ee4
+**Live-app**: https://lindy-hop-event-app.lovable.app
 
-## How can I edit this code?
+## Funktioner
 
-There are several ways of editing your application.
+Appen innehåller tre huvudfunktioner:
 
-**Use Lovable**
+- **BPM-mätare** - För att mäta hur snabb musiken är
+- **Terrible Lindy Bot** - En komisk lindy hop bot som man kan ringa upp och ha röstkonversationer med om lindy hop
+- **Dance Card** - Ett digitalt danskort för att hålla kolla på vilka man har dansat med och ska dansa med
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f07fdaa9-2b36-46f8-9764-3a9ded1b2ee4) and start prompting.
+## Teknisk stack
 
-Changes made via Lovable will be committed automatically to this repo.
+Projektet är byggt med moderna webbteknologier:
 
-**Use your preferred IDE**
+- **Vite** - Snabb build-tool och dev server
+- **React 18** - UI-bibliotek
+- **TypeScript** - Typad JavaScript
+- **React Router** - Routing
+- **shadcn-ui** - UI-komponenter baserade på Radix UI
+- **Tailwind CSS** - Utility-first CSS framework
+- **TanStack Query** - Data fetching och state management
+- **React Hook Form** - Formulärhantering
+- **Zod** - Schema-validering
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+För att köra projektet lokalt behöver du:
 
-Follow these steps:
+- Node.js (rekommenderas att installera via [nvm](https://github.com/nvm-sh/nvm#installing-and-updating))
+- npm eller bun
+
+### Steg för att komma igång
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# 1. Klona repositoryt
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# 2. Navigera till projektmappen
+cd lindy-hop-event-app
 
-# Step 3: Install the necessary dependencies.
-npm i
+# 3. Installera dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# 4. Starta utvecklingsservern
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Appen kommer nu att köras på `http://localhost:5173` (eller annan port som Vite väljer).
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Tillgängliga kommandon
 
-**Use GitHub Codespaces**
+- `npm run dev` - Startar utvecklingsservern med hot-reload
+- `npm run build` - Bygger produktionversionen
+- `npm run build:dev` - Bygger i development-läge
+- `npm run preview` - Förhandsvisar produktionsbyggen
+- `npm run lint` - Kör ESLint för kodkvalitetskontroll
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Projektstruktur
 
-## What technologies are used for this project?
+```
+lindy-hop-event-app/
+├── src/
+│   ├── components/     # Återanvändbara komponenter
+│   │   ├── ui/        # shadcn-ui komponenter
+│   │   └── NavLink.tsx
+│   ├── pages/         # Sidkomponenter
+│   │   ├── Menu.tsx
+│   │   ├── BpmCounter.tsx
+│   │   ├── TerribleLindyBot.tsx
+│   │   ├── DanceCard.tsx
+│   │   └── NotFound.tsx
+│   ├── hooks/         # Custom React hooks
+│   ├── lib/           # Hjälpfunktioner
+│   ├── assets/        # Bilder och statiska filer
+│   ├── App.tsx         # Huvudapplikationskomponent
+│   └── main.tsx        # Applikationsentrypunkt
+├── public/            # Statiska filer
+└── package.json       # Projektkonfiguration och dependencies
+```
 
-This project is built with:
+## Deployment
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/f07fdaa9-2b36-46f8-9764-3a9ded1b2ee4) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Appen är deployad via Lovable och kan nås live på https://lindy-hop-event-app.lovable.app
